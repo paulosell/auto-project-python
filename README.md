@@ -1,4 +1,4 @@
-Scrip em Python e shell para automatizar o processo de criação de repositórios no Github. Para utilização, faz-se necessário um [token de acesso](https://docs.github.com/pt/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token) do GitHub.
+Script em Python e Shell para automatizar o processo de criação de repositórios no Github. Para utilização, faz-se necessário um [token de acesso](https://docs.github.com/pt/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token) do GitHub.
 
 ## Instalação:
 
