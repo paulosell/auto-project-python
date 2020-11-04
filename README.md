@@ -10,7 +10,7 @@ cd .auto-project-python
 pip install -r requirements.txt
 echo "seu_token_do_git" >> token-git.txt
 chmod 777 create-project (pode precisar de sudo)
-cp /usr/local/bin create-project (pode precisar de sudo)
+cp create-project /usr/local/bin (pode precisar de sudo)
 ```
 
 ## Uso:
