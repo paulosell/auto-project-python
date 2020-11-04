@@ -1,14 +1,42 @@
 #!/bin/bash
 
+usage() { echo "Usage: 
+create_project -n <project_name> [-i <lang1,lang2...langN>]
+
+-n  Project name
+-i .gitignore templates based in gitginore.io [see https://github.com/toptal/gitignore/tree/master/templates]" 1>&2; exit 1; }
+
+if [ $# -lt 2 ] || [ $# -eq 3 ]|| [ $# -gt 4 ]  ; then
+    usage
+fi
+
+while getopts ":i:n:" o; do
+    case "${o}" in
+        n) 
+            n=${OPTARG}
+            ;;
+        i)
+            i=${OPTARG}
+            ;;
+    esac
+done
+shift $((OPTIND-1))
+
 cd 
 cd .auto-project-python
-python3 create_project.py $1
-mkdir $1
-mv $1 ~
+python3 create_project.py ${n}
+mkdir ${n}
+mv -r ${n} ~
 cd
-cd $1 
+cd ${n}
 git init
-git remote add origin https://github.com/paulosell/$1.git
+git remote add origin https://github.com/paulosell/${n}.git
+
+if ! [[ -z "${i}" ]] 
+  then
+    curl -sL https://www.toptal.com/developers/gitignore/api/${i} >> .gitignore.txt
+fi
+
 touch README.md
 git add .
 git commit -m "commit inicial"

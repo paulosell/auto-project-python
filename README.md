@@ -16,6 +16,6 @@ cp /usr/local/bin create-project (pode precisar de sudo)
 ## Uso:
 
 ```
-Para usar o script basta digitar de qualquer lugar no terminal 'create-project [nome_do_projeto]'
+Para usar o script basta digitar de qualquer lugar no terminal 'create-project -n <nome_do_projeto> -i [-i <lang1,lang2...langN>]'
 ```
 
