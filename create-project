@@ -34,7 +34,7 @@ git remote add origin https://github.com/paulosell/${n}.git
 
 if ! [[ -z "${i}" ]] 
   then
-    curl -sL https://www.toptal.com/developers/gitignore/api/${i} >> .gitignore.txt
+    curl -sL https://www.toptal.com/developers/gitignore/api/${i} >> .gitignore
 fi
 
 touch README.md
