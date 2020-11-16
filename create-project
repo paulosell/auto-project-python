@@ -26,7 +26,7 @@ cd
 cd .auto-project-python
 python3 create_project.py ${n}
 mkdir ${n}
-mv -r ${n} ~
+mv ${n} ~
 cd
 cd ${n}
 git init
